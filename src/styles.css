@@ -1,0 +1,43 @@
+
+ * {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    padding: 2%;
+}
+
+.movie-group {
+    display: grid !important;
+    grid-template-columns: repeat(5,1fr) !important;
+    grid-gap: 15px 15px !important;
+}
+
+@media (min-width: 576px) {
+    .card-group>.card+.card {
+        border: var(--bs-card-border-width) solid var(--bs-card-border-color) !important;
+        border-radius: var(--bs-card-border-radius) !important;
+    }
+}
+
+.movie-description{
+    display: -webkit-box;
+    overflow: hidden;
+    line-height: 20px;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+}
+
+.movie-list img {
+    width: 300px;
+    height: 350px;
+}
+
+.movie-title {
+    font-size: 1.429em;
+    margin-top: 10px;
+}
