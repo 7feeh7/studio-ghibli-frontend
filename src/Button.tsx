@@ -12,7 +12,7 @@ const ButtonUpdate: React.FC<{ setVisibleAlert: (value: boolean) => void }> = ({
         setLoading(true)
 
         try {
-            await api.post('/films/update', { update_all: 1 })
+            await api.get('/films/update')
             setVisibleAlert(true)
         } catch (error) {
             console.error(error)
